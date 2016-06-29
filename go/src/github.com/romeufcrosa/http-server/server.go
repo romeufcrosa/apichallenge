@@ -3,14 +3,19 @@ package main
 import (
     //"encoding/json"
     //"io/ioutil"
-    "log"
     "fmt"
+    "log"
     "net/http"
+    "database/sql"
     //"net/url"
     "strconv"
 )
 
-func creditHandler(w http.ResponseWriter, r *http.Request) {
+type Env struct {
+    db *sql.DB
+}
+
+func (env *Env) creditHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println(r.Method)
     switch r.Method {
         case "GET":
@@ -19,7 +24,7 @@ func creditHandler(w http.ResponseWriter, r *http.Request) {
             if err != nil {
                 log.Fatal(err)
             }
-            read(creditID)
+            read(env, creditID)
         case "POST":
             // Create a new record
         case "PUT":
@@ -32,7 +37,17 @@ func creditHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+// START UP DB
+    db, err := sql.Open("mysql",
+        "root:my-secret-pw@tcp(127.0.0.1:3306)/test")
+
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    env := &Env{db: db}
+
     http.DefaultTransport.(*http.Transport).MaxIdleConnsPerHost = 100
-    http.HandleFunc("/credits/", creditHandler)
+    http.HandleFunc("/credits/", env.creditHandler)
     http.ListenAndServe(":8080", nil)
 }

@@ -6,14 +6,7 @@ import (
     _ "github.com/go-sql-driver/mysql"
 )
 
-func read(rowID int) {
-    db, err := sql.Open("mysql",
-        "user:password@tcp(127.0.0.1:3306)/test")
-    err = db.Ping();
-    if err != nil {
-        log.Fatal(err)
-    }
-    defer db.Close()
+func read(env *Env, rowID int) {
     var (
         balanceID int
         customerID int
@@ -21,7 +14,7 @@ func read(rowID int) {
         amount float32
         baseCurrencyCode []byte
     )
-    rows, err := db.Query("SELECT * FROM enterprise_customerbalance WHERE customer_id = ?", rowID)
+    rows, err := env.db.Query("SELECT * FROM enterprise_customerbalance WHERE customer_id = ?", rowID)
     if err != nil {
         log.Fatal(err)
     }
