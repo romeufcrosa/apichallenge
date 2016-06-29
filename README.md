@@ -82,7 +82,7 @@ To start the API server just do
 This is a Linux compiled binary, so for Mac/Windows you will need to recompile it.
 
 ### _Tech Used
-* [golang]          - v1.2.4
+* [golang]          - v1.6.2
 * [go-sql-driver]   - v1.2.0
 
 ___
@@ -152,29 +152,29 @@ ___
 ### *Golang*
 ```
 $ loadtest http://localhost:8080/credits/21 -t 20 -c 20 --rps 1000
-[Tue Jun 28 2016 17:02:54 GMT+0100 (WEST)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
-[Tue Jun 28 2016 17:02:59 GMT+0100 (WEST)] INFO Requests: 4426, requests per second: 885, mean latency: 30 ms
-[Tue Jun 28 2016 17:03:04 GMT+0100 (WEST)] INFO Requests: 9422, requests per second: 1000, mean latency: 0 ms
-[Tue Jun 28 2016 17:03:09 GMT+0100 (WEST)] INFO Requests: 14423, requests per second: 1000, mean latency: 0 ms
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Target URL:          http://localhost:8080/credits/21
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Max time (s):        20
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Concurrency level:   20
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Agent:               none
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Requests per second: 1000
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Completed requests:  19417
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Total errors:        0
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Total time:          20.001395778 s
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Requests per second: 971
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Total time:          20.001395778 s
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO Percentage of the requests served within a certain time
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO   50%      2 ms
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO   90%      4 ms
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO   95%      6 ms
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO   99%      54 ms
-[Tue Jun 28 2016 17:03:14 GMT+0100 (WEST)] INFO  100%      1416 ms (longest request)
+[Wed Jun 29 2016 18:43:48 GMT+0100 (WEST)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Wed Jun 29 2016 18:43:53 GMT+0100 (WEST)] INFO Requests: 4576, requests per second: 915, mean latency: 20 ms
+[Wed Jun 29 2016 18:43:58 GMT+0100 (WEST)] INFO Requests: 9576, requests per second: 1001, mean latency: 0 ms
+[Wed Jun 29 2016 18:44:03 GMT+0100 (WEST)] INFO Requests: 14576, requests per second: 1000, mean latency: 0 ms
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Target URL:          http://localhost:8080/credits/21
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Max time (s):        20
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Concurrency level:   20
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Agent:               none
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Requests per second: 1000
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Completed requests:  19574
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Total errors:        0
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Total time:          20.002081337 s
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Requests per second: 979
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Total time:          20.002081337 s
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO Percentage of the requests served within a certain time
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO   50%      2 ms
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO   90%      4 ms
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO   95%      7 ms
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO   99%      57 ms
+[Wed Jun 29 2016 18:44:08 GMT+0100 (WEST)] INFO  100%      1413 ms (longest request)
 ```
 
 [PIMF]: <http://gjerokrsteski.github.io/pimf-framework/>

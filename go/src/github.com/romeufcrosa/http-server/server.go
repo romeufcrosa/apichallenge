@@ -32,6 +32,7 @@ func creditHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+    http.DefaultTransport.(*http.Transport).MaxIdleConnsPerHost = 100
     http.HandleFunc("/credits/", creditHandler)
     http.ListenAndServe(":8080", nil)
 }
