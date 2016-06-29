@@ -7,8 +7,7 @@ import (
     "log"
     "net/http"
     "database/sql"
-    //"net/url"
-    "strconv"
+//    "strconv"
 )
 
 type Env struct {
@@ -16,14 +15,17 @@ type Env struct {
 }
 
 func (env *Env) creditHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Println(r.Method)
     switch r.Method {
         case "GET":
             // Serve the resource
-            creditID, err := strconv.Atoi(r.URL.Path[len("/credits/"):])
+            var creditID int
+
+            _, err := fmt.Sscanf(r.URL.Path, "/credits/%d", &creditID)
+
             if err != nil {
                 log.Fatal(err)
             }
+
             read(env, creditID)
         case "POST":
             // Create a new record
