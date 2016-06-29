@@ -52,9 +52,9 @@ To start the API server just do
 ``php run-server.php ``
 
 ### _Tech Used
-* [ReactPHP] (v0.4.1)
-* [PIMF]     (v1.9)
-* [PHP-PDO] => Database-Driver (v5.5.9, PHP Version)
+* [ReactPHP] - v0.4.1
+* [PIMF]     - v1.9
+* [PHP-PDO]  - v5.5.9 tied to the PHP Version
 
 ## NodeJS API
 
@@ -65,10 +65,10 @@ To start the API server just do
 ``node server.js ``
 
 ### _Tech Used
-* [node.js] (v4.4.4)
-* [Express] (v4.0.0)
-* [mysql] (v2.11.1)
-* [body-parser] (v1.0.1)
+* [node.js]     - v4.4.4
+* [Express]     - v4.0.0
+* [mysql]       - v2.11.1
+* [body-parser] - v1.0.1
 
 
 ## Golang API
@@ -80,8 +80,8 @@ To start the API server just do
 This is a Linux compiled binary, so for Mac/Windows you will need to recompile it.
 
 ### _Tech Used
-* [golang] (v1.2.4)
-* [go-sql-driver] (v1.2.0)
+* [golang]          - v1.2.4
+* [go-sql-driver]   - v1.2.0
 
 ___
 # Final Thoughts
