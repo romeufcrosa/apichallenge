@@ -36,7 +36,7 @@ func (env *Env) creditHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 // START UP DB
     db, err := sql.Open("mysql",
-        "root:my-secret-pw@tcp(127.0.0.1:3306)/test")
+        "user:password@tcp(127.0.0.1:3306)/test")
 
     if err != nil {
         log.Fatal(err)
