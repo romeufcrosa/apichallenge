@@ -3,11 +3,10 @@ package main
 import (
     //"encoding/json"
     //"io/ioutil"
-    "fmt"
     "log"
     "net/http"
     "database/sql"
-//    "strconv"
+    "strconv"
 )
 
 type Env struct {
@@ -18,14 +17,10 @@ func (env *Env) creditHandler(w http.ResponseWriter, r *http.Request) {
     switch r.Method {
         case "GET":
             // Serve the resource
-            var creditID int
-
-            _, err := fmt.Sscanf(r.URL.Path, "/credits/%d", &creditID)
-
+            creditID, err := strconv.Atoi(r.URL.Path[9:])
             if err != nil {
                 log.Fatal(err)
             }
-
             read(env, creditID)
         case "POST":
             // Create a new record
