@@ -28,6 +28,8 @@ If you really want to use nginx, apache2, etc. Then please also post your server
 
 **!Warning!** Also, if you do any system tweaking (i.e. increasing the file limits in /etc/security/limits.conf) please document these changes as well.
 
+If you're curious about the tool used and want to use it also, it's called [loadtest]
+
 
 ### Folder Structure
 
@@ -185,3 +187,4 @@ $ loadtest http://localhost:8080/credits/21 -t 20 -c 20 --rps 1000
 [node.js]: <http://nodejs.org>
 [express]: <http://expressjs.com>
 [AngularJS]: <http://angularjs.org>
+[loadtest]: <https://www.npmjs.com/package/loadtest>
