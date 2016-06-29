@@ -38,7 +38,7 @@ I decided to create a base folder structure per language, this was just for conv
 I've started the ball rolling by developing 3 APIs, in no way are these the best possible... that's the whole point of this, to improve and provide alternatives.
 So feel free to change my code however you like. Or create your new API from scratch.
 
-Everytime there's a commited change I'll re-run the testbed and publish the benchmarks as <commit hash>.bench so that it can be easily traced to specific code changes.
+Everytime there's a commited change I'll re-run the testbed and publish the benchmarks as *commit hash*.bench so that it can be easily traced to specific code changes.
 
 I recommend providing a README file for every new API created detailing the fundamentals (some of this stuff mentioned before) like the versions of everything used.
 I'll document below and example for the 3 APIs included.
