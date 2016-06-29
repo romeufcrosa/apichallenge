@@ -1,0 +1,8 @@
+{
+  "require": {
+    "react/react": "0.4.2",
+    "gjerokrsteski/pimf": "dev-master",
+    "ext-libevent": ">=0.1.0",
+    "zircote/swagger-php": "^2.0"
+  }
+}

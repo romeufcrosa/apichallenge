@@ -1,0 +1,121 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Customer Credit API",
+        "description": "This is a sample swagger-ui for the Customer Credit API",
+        "termsOfService": "http://localhost/terms/",
+        "contact": {
+            "email": "romeu.rosa@parceiro.sonae.pt"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "host": "localhost",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/credits/{id}": {
+            "get": {
+                "tags": [
+                    "credit"
+                ],
+                "summary": "Finds Credit by Customer ID",
+                "description": "Retrieves credit information for a specific customer",
+                "operationId": "FindExistingCredit",
+                "consumes": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Customer id to filter by",
+                        "required": true,
+                        "type": "integer",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Customer Credit Found",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Credit"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Customer ID"
+                    }
+                },
+                "security": [
+                    {
+                        "credits_auth": [
+                            "write:credits",
+                            "read:credits"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Credit": {
+            "required": [
+                "customer_id"
+            ],
+            "properties": {
+                "balance_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "customer_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "website_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "amount": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "base_currency_code": {
+                    "type": "string"
+                }
+            },
+            "xml": {
+                "name": "Credit"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "credit",
+            "description": "Customer Credit API",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        }
+    ],
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
