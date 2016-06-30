@@ -4,22 +4,24 @@ import (
     //"encoding/json"
     //"io/ioutil"
     "log"
-    "fmt"
     "net/http"
-    //"net/url"
+    "database/sql"
     "strconv"
 )
 
-func creditHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Println(r.Method)
+type Env struct {
+    db *sql.DB
+}
+
+func (env *Env) creditHandler(w http.ResponseWriter, r *http.Request) {
     switch r.Method {
         case "GET":
             // Serve the resource
-            creditID, err := strconv.Atoi(r.URL.Path[len("/credits/"):])
+            creditID, err := strconv.Atoi(r.URL.Path[9:])
             if err != nil {
                 log.Fatal(err)
             }
-            read(creditID)
+            read(env, creditID)
         case "POST":
             // Create a new record
         case "PUT":
@@ -32,7 +34,17 @@ func creditHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+// START UP DB
+    db, err := sql.Open("mysql",
+        "user:password@tcp(127.0.0.1:3306)/test")
+
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    env := &Env{db: db}
+
     http.DefaultTransport.(*http.Transport).MaxIdleConnsPerHost = 100
-    http.HandleFunc("/credits/", creditHandler)
+    http.HandleFunc("/credits/", env.creditHandler)
     http.ListenAndServe(":8080", nil)
 }
