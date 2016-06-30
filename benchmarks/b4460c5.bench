@@ -1,0 +1,29 @@
+# Commit Hash : b4460c5
+# Author      : Nuno Mota
+
+```
+$ loadtest http://localhost:8080/credits/21 -t 20 -c 20 --rps 1000
+[Thu Jun 30 2016 08:57:35 GMT+0100 (WEST)] INFO Requests: 0, requests per second: 0, mean latency: 0 ms
+[Thu Jun 30 2016 08:57:40 GMT+0100 (WEST)] INFO Requests: 4448, requests per second: 890, mean latency: 20 ms
+[Thu Jun 30 2016 08:57:45 GMT+0100 (WEST)] INFO Requests: 9445, requests per second: 1000, mean latency: 0 ms
+[Thu Jun 30 2016 08:57:50 GMT+0100 (WEST)] INFO Requests: 14444, requests per second: 1000, mean latency: 0 ms
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Target URL:          http://localhost:8080/credits/21
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Max time (s):        20
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Concurrency level:   20
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Agent:               none
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Requests per second: 1000
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Completed requests:  19437
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Total errors:        0
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Total time:          20.0009639 s
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Requests per second: 972
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Total time:          20.0009639 s
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO Percentage of the requests served within a certain time
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO   50%      1 ms
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO   90%      4 ms
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO   95%      10 ms
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO   99%      61 ms
+[Thu Jun 30 2016 08:57:55 GMT+0100 (WEST)] INFO  100%      1429 ms (longest request)
+```
