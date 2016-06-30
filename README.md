@@ -2,6 +2,7 @@
 
 ## TOC
 * [What is this?](#what-is-this)
+* [Current Objective](#current-objective)
 * [API Definition](#api-definition)
 * [DB Definition](#database-definition)
 * [Constraints](#constraints)
@@ -27,6 +28,10 @@
 ### What is this?
 The idea is to collectively pool our coding resources in order to achieve the best performing API in whatever language you prefer.
 They will all run through a performance benchmarker and the results will be published.
+
+### Current Objective
+We're currently in the **first stage**, the objective is to benchmark GET Requests.
+Second stage will open up the challenge to POST/PUT.
 
 ### API Definition
 To maintain consistency (and fairness) here is the spec for the API
