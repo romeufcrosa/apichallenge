@@ -1,5 +1,29 @@
 # API Challenge
 
+## TOC
+* [What is this?](#what-is-this)
+* [API Definition](#api-definition)
+* [DB Definition](#database-definition)
+* [Constraints](#constraints)
+* [Benchmarking](#performance-benchmarking)
+* [Folder Structure](#folder-structure)
+* [What's Included?](#whats-included)
+* APIs
+  * [ReactPHP](#php-api---reactphp)
+    * [Running](#_running-the-app)
+    * [Tech](#_tech-used)
+  * [NodeJS](#nodejs-api)
+    * [Running](#_running-the-app-1)
+    * [Tech](#_tech-used-1)
+  * [Golang](#golang-api)
+    * [Running](#_running-the-app-2)
+    * [Tech](#_tech-used-2)
+* [Final Thoughts](#final-thoughts)
+* [First Benchmarks](#1st-run-benchmarks)
+  * [ReactPHP](#reactphp)
+  * [NodeJS](#nodejs)
+  * [Golang](#golang)
+
 ### What is this?
 The idea is to collectively pool our coding resources in order to achieve the best performing API in whatever language you prefer.
 They will all run through a performance benchmarker and the results will be published.
