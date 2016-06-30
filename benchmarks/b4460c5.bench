@@ -1,5 +1,7 @@
 # Commit Hash : b4460c5
 # Author      : Nuno Mota
+# API         : Golang 
+# PATH        : go/
 
 ```
 $ loadtest http://localhost:8080/credits/21 -t 20 -c 20 --rps 1000
